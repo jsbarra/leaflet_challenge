@@ -36,7 +36,7 @@ d3.json(url, function(data) {
     }
 
 
-    function circle_color(magnitude) {
+    function circle_color(mag) {
         switch (true) {
             case magnitude > 5:
               return "#ea2c2c";
@@ -70,7 +70,7 @@ d3.json(url, function(data) {
         },
         style: styleInfo,
         onEachFeature: function(feature, layer) {
-            layer.bindPopup(("<h3>" + feature.properties.place + "</h3><hr><p>" + new Date(feature.properties.time) + "</p><hr>" + "Magnitude: " + feature.properties.mag);
+            layer.bindPopup("<h3>" + feature.properties.place + "</h3><hr><p>" + new Date(feature.properties.time) + "</p><hr>" + "Magnitude: " + feature.properties.mag);
         }
 
     }).addTo(my_map);
